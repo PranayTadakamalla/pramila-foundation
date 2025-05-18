@@ -1,0 +1,262 @@
+.founder-section {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #003366;
+}
+
+.founder-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 153, 51, 0.05);
+  border-radius: 50%;
+  transform: translate(-150px, 150px);
+  z-index: 0;
+}
+
+.founder-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 51, 102, 0.05);
+  border-radius: 50%;
+  transform: translate(-200px, 200px);
+  z-index: 0;
+}
+
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.founder-details {
+  flex: 1.5;
+  min-width: 320px;
+  max-width: 650px;
+}
+
+.founder-details h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.underline {
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff9933, #ffcc33);
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.foundation-intro {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  color: #003366;
+}
+
+.foundation-meta {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-left: 6px solid #ff9933;
+  box-shadow: 0 6px 18px rgba(255, 153, 51, 0.15);
+}
+
+.meta-item {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: baseline;
+  font-size: 1.1rem;
+  color: #003366;
+}
+
+.meta-item:last-child {
+  margin-bottom: 0;
+}
+
+.meta-label {
+  font-weight: 700;
+  min-width: 140px;
+  letter-spacing: 0.03em;
+}
+
+.meta-value {
+  font-weight: 500;
+  color: #555;
+}
+
+.foundation-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  color: #444;
+}
+
+.founder-image {
+  flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 51, 102, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.founder-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  transition: filter 0.3s ease;
+}
+
+.image-wrapper:hover .founder-img {
+  filter: brightness(70%);
+}
+
+.social-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 5;
+}
+
+.image-wrapper:hover .social-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.social-overlay a {
+  color: #fff;
+  background-color: #ff9933;
+  padding: 14px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-overlay a:hover {
+  background-color: #ffcc33;
+  transform: scale(1.2);
+}
+
+.founder-name-section {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.founder-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 6px;
+}
+
+.founder-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ff9933;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .founder-section {
+    padding: 80px 20px;
+  }
+
+  .founder-details h2 {
+    font-size: 2.2rem;
+  }
+
+  .foundation-intro {
+    font-size: 1.15rem;
+  }
+
+  .founder-img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .founder-image,
+  .founder-details {
+    max-width: 100%;
+    flex: unset;
+  }
+
+  .founder-img {
+    height: 400px;
+  }
+
+  .founder-name-section {
+    margin-top: 14px;
+  }
+
+  .founder-name {
+    font-size: 1.4rem;
+  }
+
+  .founder-title {
+    font-size: 1rem;
+  }
+
+  .foundation-meta {
+    padding: 20px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-img {
+    height: 320px;
+  }
+
+  .social-overlay a {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
