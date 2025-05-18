@@ -1,245 +1,245 @@
 .mission {
-  padding: 100px 0;
-  background-color: #f9f9f9;
-  position: relative;
-  overflow: hidden;
-}
-
-.mission::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background-color: rgba(255, 153, 51, 0.05);
-  border-radius: 50%;
-  transform: translate(100px, -150px);
-}
-
-.mission::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 400px;
-  height: 400px;
-  background-color: rgba(0, 51, 102, 0.05);
-  border-radius: 50%;
-  transform: translate(-200px, 200px);
-}
-
-.mission-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  position: relative;
-  z-index: 1;
-}
-
-.mission-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.mission-intro h3 {
-  font-size: 2rem;
-  color: #003366;
-  margin-bottom: 20px;
-}
-
-.mission-intro p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #555;
-  line-height: 1.7;
-}
-
-.mission-values {
-  margin: 40px 0;
-}
-
-.value-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 25px;
-}
-
-.value-icon {
-  font-size: 1.8rem;
-  color: #ff9933;
-  margin-right: 20px;
-  background-color: rgba(255, 153, 51, 0.1);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.value-content h4 {
-  font-size: 1.3rem;
-  color: #003366;
-  margin-bottom: 8px;
-}
-
-.value-content p {
-  color: #666;
-  line-height: 1.5;
-}
-
-.mission-quote {
-  margin: 40px 0;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
-.mission-quote::before {
-  content: '"';
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 5rem;
-  color: rgba(255, 153, 51, 0.1);
-  font-family: Georgia, serif;
-  line-height: 1;
-}
-
-.mission-quote blockquote {
-  font-size: 1.8rem;
-  font-style: italic;
-  color: #003366;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.mission-stats {
-  flex: 1;
-  min-width: 300px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  align-content: center;
-}
-
-.stat-item {
-  background: #fff;
-  border-radius: 15px;
-  padding: 40px 30px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s ease;
-  border: 1px solid #f0f0f0;
-}
-
-.stat-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #ff9933;
-  margin-bottom: 15px;
-  position: relative;
-  display: inline-block;
-}
-
-.stat-number::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 3px;
-  background-color: #ff9933;
-}
-
-.stat-label {
-  font-size: 1.2rem;
-  color: #003366;
-  font-weight: 500;
-}
-
-@media (max-width: 992px) {
-  .mission {
-    padding: 80px 0;
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mission::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 153, 51, 0.05);
+    border-radius: 50%;
+    transform: translate(100px, -150px);
+  }
+  
+  .mission::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 51, 102, 0.05);
+    border-radius: 50%;
+    transform: translate(-200px, 200px);
+  }
+  
+  .mission-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .mission-text {
+    flex: 1;
+    min-width: 300px;
   }
   
   .mission-intro h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 20px;
   }
   
   .mission-intro p {
-    font-size: 1rem;
-  }
-  
-  .value-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
-  
-  .value-content h4 {
-    font-size: 1.2rem;
-  }
-  
-  .mission-quote blockquote {
-    font-size: 1.6rem;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
-  }
-  
-  .stat-label {
     font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .mission {
-    padding: 60px 0;
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.7;
   }
   
-  .mission-quote blockquote {
-    font-size: 1.4rem;
-  }
-  
-  .stat-item {
-    padding: 30px 20px;
-  }
-  
-  .stat-number {
-    font-size: 2.2rem;
-  }
-  
-  .stat-label {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .mission-stats {
-    grid-template-columns: 1fr;
+  .mission-values {
+    margin: 40px 0;
   }
   
   .value-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
   }
   
   .value-icon {
-    margin-right: 0;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ff9933;
+    margin-right: 20px;
+    background-color: rgba(255, 153, 51, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
-}
+  
+  .value-content h4 {
+    font-size: 1.3rem;
+    color: #003366;
+    margin-bottom: 8px;
+  }
+  
+  .value-content p {
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .mission-quote {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  
+  .mission-quote::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 5rem;
+    color: rgba(255, 153, 51, 0.1);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  
+  .mission-quote blockquote {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #003366;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .mission-stats {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-content: center;
+  }
+  
+  .stat-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff9933;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .stat-number::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: #ff9933;
+  }
+  
+  .stat-label {
+    font-size: 1.2rem;
+    color: #003366;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 992px) {
+    .mission {
+      padding: 80px 0;
+    }
+    
+    .mission-intro h3 {
+      font-size: 1.8rem;
+    }
+    
+    .mission-intro p {
+      font-size: 1rem;
+    }
+    
+    .value-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+    }
+    
+    .value-content h4 {
+      font-size: 1.2rem;
+    }
+    
+    .mission-quote blockquote {
+      font-size: 1.6rem;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+    }
+    
+    .stat-label {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mission {
+      padding: 60px 0;
+    }
+    
+    .mission-quote blockquote {
+      font-size: 1.4rem;
+    }
+    
+    .stat-item {
+      padding: 30px 20px;
+    }
+    
+    .stat-number {
+      font-size: 2.2rem;
+    }
+    
+    .stat-label {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .mission-stats {
+      grid-template-columns: 1fr;
+    }
+    
+    .value-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .value-icon {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
