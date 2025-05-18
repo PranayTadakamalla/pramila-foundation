@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import Logo from '../assets/Logo.jpg';
-import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin} from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -29,15 +29,16 @@ function Footer() {
         <div className="footer-contact">
           <h3>Contact Us</h3>
           <ul>
-            <li><FaMapMarkerAlt /> <span>Pramila Foundation Office, Main Street, Telangana</span></li>
-            <li><FaPhone /> <span>+91 9876543210</span></li>
-            <li><FaEnvelope /> <span>info@pramilafoundation.org</span></li>
+            <li><FaMapMarkerAlt /> <span>Pramila Foundation, Hyderabad, Telangana</span></li>
+            <li><FaPhone /> <span>+91 8099079118</span></li>
+            <li><FaEnvelope /> <span>pramilafoun@gmail.com</span></li>
           </ul>
           
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.facebook.com/share/1Go3N4X2MV/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a href="https://x.com/pramilafoun?t=rELb4h2tsAo3wh1KlpBhNw&s=09" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+            <a href="https://www.instagram.com/pramilafoundtaion/#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/pramila-foundation-a7000a231/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
           </div>
         </div>
         
