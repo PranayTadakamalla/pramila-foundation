@@ -6,12 +6,14 @@ import Mission from './components/Mission';
 import Programs from './components/Programs';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
+import FounderSection from './components/FounderSection';
 
 function App() {
   return (
     <div className="app">
       <Header />
       <Hero />
+      <FounderSection />
       <Mission />
       <Programs />
       <Gallery />

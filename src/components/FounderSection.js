@@ -47,7 +47,7 @@ function FounderSection() {
                 <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
                   <FaInstagram />
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/dr-k-mahesh-8339602a8/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                   <FaLinkedinIn />
                 </a>
               </div>
