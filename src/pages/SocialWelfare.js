@@ -1,19 +1,27 @@
 import React from 'react';
 import './SocialWelfare.css';
 import { FaLeaf, FaHandsHelping, FaTint, FaPeopleCarry, FaHeart, FaSeedling, FaHome } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
 
 function SocialWelfare() {
+  const navigate = useNavigate(); // ✅ Initialize navigate
+
+  const handleReturnHome = () => {
+    navigate('/'); // Navigate to home route
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+  };
+
   return (
     <section id="social-welfare" className="social-welfare">
       <div className="container">
         <div className="section-header">
-          <h2>Social Welfate Initiatives</h2>
+          <h2>Social Welfare Initiatives</h2>
           <div className="underline"></div>
           <p className="section-intro">
-           Towards a Better Tomorrow
+            Towards a Better Tomorrow
           </p>
         </div>
-        
+
         <div className="welfare-hero">
           <div className="hero-content">
             <h3>Quiet Progress</h3>
@@ -36,13 +44,13 @@ function SocialWelfare() {
             <div className="image-frame plantation-only"></div>
           </div>
         </div>
-        
+
         <div className="initiatives-section">
           <div className="section-title">
             <h3>Guiding Values</h3>
             <div className="title-underline"></div>
           </div>
-          
+
           <div className="initiatives-grid">
             <div className="initiative-card">
               <div className="initiative-icon">
@@ -56,7 +64,7 @@ function SocialWelfare() {
                 <li>Fostering natural cycles</li>
               </ul>
             </div>
-            
+
             <div className="initiative-card">
               <div className="initiative-icon">
                 <FaLeaf />
@@ -69,7 +77,7 @@ function SocialWelfare() {
                 <li>Planting hope where it matters</li>
               </ul>
             </div>
-            
+
             <div className="initiative-card">
               <div className="initiative-icon">
                 <FaTint />
@@ -82,7 +90,7 @@ function SocialWelfare() {
                 <li>Quiet guardianship of the essential</li>
               </ul>
             </div>
-            
+
             <div className="initiative-card">
               <div className="initiative-icon">
                 <FaPeopleCarry />
@@ -97,7 +105,7 @@ function SocialWelfare() {
             </div>
           </div>
         </div>
-        
+
         <div className="women-health-section">
           <div className="women-health-content">
             <div className="section-title left-aligned">
@@ -107,7 +115,7 @@ function SocialWelfare() {
             <p className="women-health-intro">
               In hushed efforts and soft voices, we share comfort, dignity, and care—especially where it's needed most.
             </p>
-            
+
             <div className="women-health-features">
               <div className="feature-item">
                 <div className="feature-icon">
@@ -118,7 +126,7 @@ function SocialWelfare() {
                   <p>Speaking about wellbeing where words are rarely heard</p>
                 </div>
               </div>
-              
+
               <div className="feature-item">
                 <div className="feature-icon">
                   <FaHandsHelping />
@@ -128,7 +136,7 @@ function SocialWelfare() {
                   <p>Small gestures, shared wisdom, quiet impact</p>
                 </div>
               </div>
-              
+
               <div className="feature-item">
                 <div className="feature-icon">
                   <FaPeopleCarry />
@@ -140,11 +148,10 @@ function SocialWelfare() {
               </div>
             </div>
           </div>
-          
         </div>
-        
+
         <div className="home-button-container">
-          <button className="home-button" onClick={() => window.location.href = '/'}>
+          <button className="home-button" onClick={handleReturnHome}>
             <FaHome className="button-icon" /> Return Home
           </button>
         </div>

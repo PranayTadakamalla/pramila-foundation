@@ -1,16 +1,24 @@
 import React from 'react';
 import './Education.css';
-import { 
-  FaGraduationCap, 
-  FaChalkboardTeacher, 
-  FaUserGraduate, 
-  FaLaptop, 
-  FaBook, 
-  FaHandHoldingHeart, 
-  FaHome 
+import {
+  FaGraduationCap,
+  FaChalkboardTeacher,
+  FaUserGraduate,
+  FaLaptop,
+  FaBook,
+  FaHandHoldingHeart,
+  FaHome
 } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function Education() {
+  const navigate = useNavigate();
+
+  const handleReturnHome = () => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <section id="education" className="education">
       <div className="container">
@@ -218,7 +226,7 @@ function Education() {
         </div>
 
         <div className="home-button-container">
-          <button className="home-button" onClick={() => window.location.href = '/'}>
+          <button className="home-button" onClick={handleReturnHome}>
             <FaHome className="button-icon" /> Back to Home
           </button>
         </div>

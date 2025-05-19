@@ -1,9 +1,17 @@
 import React from 'react';
 import './Footer.css';
 import Logo from '../assets/Logo.jpg';
-import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin} from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleFooterNav = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer id="contact" className="footer">
       <div className="footer-container">
@@ -17,12 +25,10 @@ function Footer() {
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#sports">Sports</a></li>
-            <li><a href="#environment">Environment</a></li>
-            <li><a href="#social">Social Welfare</a></li>
+            <li><button onClick={() => handleFooterNav('/')}>Home</button></li>
+            <li><button onClick={() => handleFooterNav('/about')}>Mission</button></li>
+            <li><button onClick={() => handleFooterNav('/education')}>Education</button></li>
+            <li><button onClick={() => handleFooterNav('/social')}>Social Welfare</button></li>
           </ul>
         </div>
         
@@ -33,7 +39,6 @@ function Footer() {
             <li><FaPhone /> <span>+91 8099079118</span></li>
             <li><FaEnvelope /> <span>pramilafoun@gmail.com</span></li>
           </ul>
-          
           <div className="social-icons">
             <a href="https://www.facebook.com/share/1Go3N4X2MV/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
             <a href="https://x.com/pramilafoun?t=rELb4h2tsAo3wh1KlpBhNw&s=09" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
