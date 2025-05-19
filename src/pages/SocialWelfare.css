@@ -1,0 +1,663 @@
+.social-welfare {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.social-welfare::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 153, 51, 0.05);
+  border-radius: 50%;
+  transform: translate(100px, -150px);
+}
+
+.social-welfare::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 51, 102, 0.05);
+  border-radius: 50%;
+  transform: translate(-200px, 200px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff9933, #ffcc33);
+  margin: 0 auto 20px;
+  border-radius: 4px;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Hero Section */
+.welfare-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-content h3 {
+  font-size: 2.2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  min-width: 150px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  border-left: 4px solid #ff9933;
+}
+
+.hero-stat:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff9933;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-frame {
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  background-image: url('../assets/Image1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Initiatives Section */
+.initiatives-section {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title.left-aligned {
+  text-align: left;
+}
+
+.section-title h3 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9933, #ffcc33);
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.title-underline.left-aligned {
+  margin: 0;
+}
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.initiative-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.initiative-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.initiative-icon {
+  font-size: 2.5rem;
+  color: #ff9933;
+  margin-bottom: 20px;
+  background-color: rgba(255, 153, 51, 0.1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.initiative-card h4 {
+  font-size: 1.4rem;
+  color: #003366;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.initiative-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.initiative-list li {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.initiative-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Women Health Section */
+.women-health-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.women-health-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.women-health-intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.women-health-features {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  color: #ff9933;
+  background-color: rgba(255, 153, 51, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-content h4 {
+  font-size: 1.3rem;
+  color: #003366;
+  margin-bottom: 8px;
+}
+
+.feature-content p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.women-health-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Health Camps Section */
+.health-camps-section {
+  margin-bottom: 80px;
+}
+
+.health-camps-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.health-camps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.health-camp-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.health-camp-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.camp-image {
+  height: 200px;
+  background-color: #e0e0e0;
+  background-image: url('../assets/Image2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camp-content {
+  padding: 25px;
+}
+
+.camp-content h4 {
+  font-size: 1.3rem;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.camp-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.camp-stats {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.camp-stat {
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-left: 3px solid #ff9933;
+  flex: 1;
+  min-width: 120px;
+}
+
+.camp-stat .stat-number {
+  font-size: 1.3rem;
+}
+
+.camp-stat .stat-label {
+  font-size: 0.8rem;
+}
+
+/* Impact Section */
+.impact-section {
+  margin-bottom: 80px;
+}
+
+.impact-stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.impact-story {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.impact-story:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.story-image {
+  height: 200px;
+  background-color: #e0e0e0;
+  background-image: url('../assets/Image1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.story-content {
+  padding: 25px;
+}
+
+.story-content h4 {
+  font-size: 1.3rem;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.story-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.story-stat {
+  display: inline-block;
+  background: #f9f9f9;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border-left: 3px solid #ff9933;
+}
+
+.story-stat .stat-number {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.story-stat .stat-label {
+  font-size: 0.9rem;
+}
+
+/* Get Involved Section */
+.get-involved-section {
+  background: linear-gradient(135deg, #003366, #004080);
+  border-radius: 20px;
+  padding: 50px;
+  margin-bottom: 60px;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(0, 51, 102, 0.2);
+}
+
+.get-involved-content {
+  text-align: center;
+}
+
+.get-involved-content h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.get-involved-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+.involvement-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.involvement-option {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  min-width: 200px;
+  flex: 1;
+  max-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.involvement-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+}
+
+.involvement-option h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ff9933;
+}
+
+.involvement-option p {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Home Button */
+.home-button-container {
+  text-align: center;
+  margin: 60px 0 20px;
+}
+
+.home-button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 51, 102, 0.2);
+}
+
+.home-button:hover {
+  background-color: #ff9933;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 153, 51, 0.3);
+}
+
+.button-icon {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .social-welfare {
+    padding: 80px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content h3,
+  .section-title h3,
+  .get-involved-content h3 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p,
+  .women-health-intro,
+  .health-camps-intro,
+  .get-involved-content p {
+    font-size: 1rem;
+  }
+  
+  .image-frame {
+    height: 300px;
+  }
+  
+  .get-involved-section {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-welfare {
+    padding: 60px 0;
+  }
+  
+  .welfare-hero,
+  .women-health-section {
+    flex-direction: column;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .hero-stat {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .initiative-card,
+  .feature-item {
+    padding: 20px;
+  }
+  
+  .initiative-icon,
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .get-involved-section {
+    padding: 30px 20px;
+  }
+  
+  .involvement-option {
+    min-width: 150px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-stat {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    margin-bottom: 15px;
+  }
+  
+  .camp-stats {
+    flex-direction: column;
+  }
+  
+  .home-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+}

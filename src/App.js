@@ -1,25 +1,27 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Mission from './components/Mission';
-import Programs from './components/Programs';
-import Gallery from './components/Gallery';
-import Footer from './components/Footer';
-import FounderSection from './components/FounderSection';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Education from './pages/Education';
+import SocialWelfare from './pages/SocialWelfare';
+
+const App = () => {
   return (
-    <div className="app">
+    <Router>
       <Header />
-      <Hero />
-      <FounderSection />
-      <Mission />
-      <Programs />
-      <Gallery />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/Social" element={<SocialWelfare />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
-}
+};
 
 export default App;
