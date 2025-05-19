@@ -1,21 +1,21 @@
 import React from 'react';
 import './Footer.css';
 import Logo from '../assets/Logo.jpg';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa';
 
 function Footer() {
   const navigate = useNavigate();
 
-  const handleFooterNav = (path) => {
-    navigate(path);
+  const handleLogoClick = () => {
+    navigate('/');
     window.scrollTo(0, 0);
   };
 
   return (
     <footer id="contact" className="footer">
       <div className="footer-container">
-        <div className="footer-about">
+        <div className="footer-about" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
           <img src={Logo || "/placeholder.svg"} alt="Pramila Foundation Logo" className="footer-logo" />
           <h3>Pramila Foundation</h3>
           <p>Service for a Better Society</p>
@@ -25,10 +25,10 @@ function Footer() {
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><button onClick={() => handleFooterNav('/')}>Home</button></li>
-            <li><button onClick={() => handleFooterNav('/about')}>Mission</button></li>
-            <li><button onClick={() => handleFooterNav('/education')}>Education</button></li>
-            <li><button onClick={() => handleFooterNav('/social')}>Social Welfare</button></li>
+            <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
+            <li><Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link></li>
+            <li><Link to="/education" onClick={() => window.scrollTo(0, 0)}>Education</Link></li>
+            <li><Link to="/social" onClick={() => window.scrollTo(0, 0)}>Social Welfare</Link></li>
           </ul>
         </div>
         

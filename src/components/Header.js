@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import Logo from '../assets/Logo.jpg';
 
@@ -11,7 +11,7 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleNavClick = (path) => {
+  const handleLinkClick = (path) => {
     setIsMenuOpen(false);
     navigate(path);
     window.scrollTo(0, 0);
@@ -20,7 +20,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo-container" onClick={() => handleNavClick('/')}>
+        <div className="logo-container" onClick={() => handleLinkClick('/') } style={{ cursor: 'pointer' }}>
           <img src={Logo || "/placeholder.svg"} alt="Pramila Foundation Logo" className="logo" />
           <div className="logo-text">
             <h1>Pramila Foundation</h1>
@@ -36,11 +36,21 @@ function Header() {
 
         <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <ul>
-            <li><button onClick={() => handleNavClick('/')}>Home</button></li>
-            <li><button onClick={() => handleNavClick('/about')}>About</button></li>
-            <li><button onClick={() => handleNavClick('/education')}>Education</button></li>
-            <li><button onClick={() => handleNavClick('/social')}>Social Welfare</button></li>
-            <li><a href="#contact" className="contact-btn">Contact Us</a></li>
+            <li>
+              <Link to="/" onClick={() => handleLinkClick('/')}>Home</Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={() => handleLinkClick('/about')}>About</Link>
+            </li>
+            <li>
+              <Link to="/education" onClick={() => handleLinkClick('/education')}>Education</Link>
+            </li>
+            <li>
+              <Link to="/social" onClick={() => handleLinkClick('/social')}>Social Welfare</Link>
+            </li>
+            <li>
+              <a href="#contact" className="contact-btn" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
+            </li>
           </ul>
         </nav>
       </div>

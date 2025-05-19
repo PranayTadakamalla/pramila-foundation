@@ -152,7 +152,7 @@ function SocialWelfare() {
 
         <div className="home-button-container">
           <button className="home-button" onClick={handleReturnHome}>
-            <FaHome className="button-icon" /> Return Home
+            <FaHome className="button-icon" /> Back to Home
           </button>
         </div>
       </div>
