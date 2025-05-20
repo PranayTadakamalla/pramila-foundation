@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import Logo from '../assets/Logo.jpg';
+import Logo1 from '../assets/logo1.jpg';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +21,11 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <div className="logo-container" onClick={() => handleLinkClick('/') } style={{ cursor: 'pointer' }}>
-          <img src={Logo || "/placeholder.svg"} alt="Pramila Foundation Logo" className="logo" />
+        <div className="logo-container" onClick={() => handleLinkClick('/')} style={{ cursor: 'pointer' }}>
+          <div className="dual-logo">
+            <img src={Logo || "/placeholder.svg"} alt="Pramila Foundation Logo" className="logo" />
+            <img src={Logo1 || "/placeholder.svg"} alt="Pramila Foundation Secondary Logo" className="logo logo-secondary" />
+          </div>
           <div className="logo-text">
             <h1>Pramila Foundation</h1>
             <p>Service for a Better Society</p>
