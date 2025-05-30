@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Education from './pages/Education';
 import SocialWelfare from './pages/SocialWelfare';
+import Committee from './pages/Committee';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/education" element={<Education />} />
-        <Route path="/Social" element={<SocialWelfare />} />
+        <Route path="/social" element={<SocialWelfare />} />
+        <Route path="/committee" element={<Committee />} />
       </Routes>
       <Footer/>
     </Router>
