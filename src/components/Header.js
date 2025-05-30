@@ -56,6 +56,9 @@ function Header() {
               <Link to="/committee" onClick={() => handleLinkClick('/committee')}>Committee</Link>
             </li>
             <li>
+              <Link to="/sports" onClick={() => handleLinkClick('/sports')}>Sports</Link>
+            </li>
+            <li>
               <a href="#contact" className="contact-btn" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
             </li>
           </ul>

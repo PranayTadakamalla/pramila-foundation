@@ -9,6 +9,7 @@ import About from './pages/About';
 import Education from './pages/Education';
 import SocialWelfare from './pages/SocialWelfare';
 import Committee from './pages/Committee';
+import Sports from './pages/Sports';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/education" element={<Education />} />
         <Route path="/social" element={<SocialWelfare />} />
         <Route path="/committee" element={<Committee />} />
+        <Route path="/sports" element={<Sports />} />
       </Routes>
       <Footer/>
     </Router>
