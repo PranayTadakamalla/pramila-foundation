@@ -1,0 +1,409 @@
+.committee {
+  padding: 100px 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.committee::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 153, 51, 0.05);
+  border-radius: 50%;
+  transform: translate(100px, -150px);
+}
+
+.committee::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 51, 102, 0.05);
+  border-radius: 50%;
+  transform: translate(-200px, 200px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.underline {
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, #ff9933, #ffcc33);
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.committee-members {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.member-card {
+  flex: 1;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.member-avatar {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  background-color: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-avatar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 51, 102, 0.1);
+}
+
+.social-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 5;
+}
+
+.image-wrapper:hover .social-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.social-overlay a {
+  color: #fff;
+  background-color: #ff9933;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0 4px 15px rgba(255, 153, 51, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-overlay a:hover {
+  background-color: #ffcc33;
+  transform: scale(1.2);
+}
+
+.member-info {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.member-info h4 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 8px;
+}
+
+.member-position {
+  color: #ff9933;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+}
+
+.member-desc {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.committee-highlights {
+  margin: 80px 0;
+}
+
+.highlight-section {
+  margin-bottom: 80px;
+}
+
+.highlight-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.highlight-header h3 {
+  font-size: 2.2rem;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.highlight-underline {
+  margin-bottom: 20px;
+}
+
+.highlight-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.focus-area {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  max-width: 280px;
+  width: 100%;
+}
+
+.focus-area:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.focus-emoji {
+  font-size: 4rem;
+  margin-bottom: 25px;
+  display: block;
+  transition: all 0.4s ease;
+}
+
+.focus-area:hover .focus-emoji {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.focus-area h4 {
+  font-size: 1.4rem;
+  color: #003366;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.focus-area p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.philosophy-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy-quote {
+  margin: 40px 0;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.philosophy-quote::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 5rem;
+  color: rgba(255, 153, 51, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.philosophy-quote blockquote {
+  font-size: 2rem;
+  font-style: italic;
+  color: #003366;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.philosophy-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.home-button-container {
+  text-align: center;
+  margin: 60px 0 20px;
+}
+
+.home-button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 51, 102, 0.2);
+}
+
+.home-button:hover {
+  background-color: #ff9933;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 153, 51, 0.3);
+}
+
+.button-icon {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1200px) {
+  .committee-members {
+    flex-wrap: wrap;
+  }
+
+  .member-card {
+    flex-basis: calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 992px) {
+  .committee {
+    padding: 80px 0;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .highlight-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .philosophy-text {
+    font-size: 1rem;
+  }
+
+  .member-avatar {
+    height: 300px;
+  }
+
+  .philosophy-quote blockquote {
+    font-size: 1.8rem;
+  }
+
+  .highlight-content {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .focus-emoji {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .committee {
+    padding: 60px 0;
+  }
+
+  .committee-members {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member-card {
+    flex-basis: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+
+  .highlight-content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .focus-emoji {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .philosophy-quote {
+    padding: 30px 20px;
+  }
+
+  .philosophy-quote blockquote {
+    font-size: 1.5rem;
+  }
+
+  .home-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+
+  .highlight-content {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-area {
+    padding: 30px 20px;
+  }
+
+  .focus-emoji {
+    font-size: 2.5rem;
+  }
+}

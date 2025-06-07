@@ -1,5 +1,5 @@
-import React from 'react';
-import './Education.css';
+"use client"
+import "./Education.css"
 import {
   FaGraduationCap,
   FaChalkboardTeacher,
@@ -7,17 +7,19 @@ import {
   FaLaptop,
   FaBook,
   FaHandHoldingHeart,
-  FaHome
-} from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+  FaHome,
+} from "react-icons/fa"
+import { useNavigate } from "react-router-dom"
+import Image5 from "../assets/Image5.jpg"
+import Image6 from "../assets/Image6.jpg"
 
 function Education() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleReturnHome = () => {
-    navigate('/');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    navigate("/")
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
 
   return (
     <section id="education" className="education">
@@ -25,19 +27,16 @@ function Education() {
         <div className="section-header">
           <h2>Education Initiatives</h2>
           <div className="underline"></div>
-          <p className="section-intro">
-            Empowering communities through quality education and skill development
-          </p>
+          <p className="section-intro">Empowering communities through quality education and skill development</p>
         </div>
 
         <div className="education-hero">
           <div className="hero-content">
             <h3>Transforming Lives Through Education</h3>
             <p>
-              At Pramila Foundation, we believe that education is the most powerful tool for 
-              transforming lives and communities. Our educational initiatives focus on providing 
-              quality education, skill development, and career guidance to children and youth 
-              from underprivileged backgrounds.
+              At Pramila Foundation, we believe that education is the most powerful tool for transforming lives and
+              communities. Our educational initiatives focus on providing quality education, skill development, and
+              career guidance to children and youth from underprivileged backgrounds.
             </p>
             <div className="hero-stats">
               <div className="hero-stat">
@@ -55,7 +54,9 @@ function Education() {
             </div>
           </div>
           <div className="hero-image">
-            <div className="image-frame"></div>
+            <div className="image-frame hero-image-frame">
+              <img src={Image5 || "/placeholder.svg"} alt="Education Initiative" className="hero-img" />
+            </div>
           </div>
         </div>
 
@@ -71,8 +72,8 @@ function Education() {
               </div>
               <h4>Academic Support</h4>
               <p>
-                Supporting education of children and youth through materialistic support including 
-                books, uniforms, scholarships, and digital learning tools to ensure continuous education.
+                Supporting education of children and youth through materialistic support including books, uniforms,
+                scholarships, and digital learning tools to ensure continuous education.
               </p>
             </div>
             <div className="program-card">
@@ -81,8 +82,8 @@ function Education() {
               </div>
               <h4>Career Development</h4>
               <p>
-                Motivating depressed and encouraging talented youth for career development through 
-                counseling, mentorship programs, and skill-building workshops.
+                Motivating depressed and encouraging talented youth for career development through counseling,
+                mentorship programs, and skill-building workshops.
               </p>
             </div>
             <div className="program-card">
@@ -91,8 +92,8 @@ function Education() {
               </div>
               <h4>Educational Institutions</h4>
               <p>
-                Running schools, special schools, colleges, hostels, and residential homes to provide 
-                quality education in underserved areas with focus on holistic development.
+                Running schools, special schools, colleges, hostels, and residential homes to provide quality education
+                in underserved areas with focus on holistic development.
               </p>
             </div>
             <div className="program-card">
@@ -101,8 +102,8 @@ function Education() {
               </div>
               <h4>Women Empowerment</h4>
               <p>
-                Assisting marginalized women and widows for sustainability through education, 
-                vocational training, and entrepreneurship development programs.
+                Assisting marginalized women and widows for sustainability through education, vocational training, and
+                entrepreneurship development programs.
               </p>
             </div>
           </div>
@@ -115,9 +116,8 @@ function Education() {
               <div className="title-underline"></div>
             </div>
             <p className="training-intro">
-              We work at the block level to provide special training programs designed to enhance 
-              skills and improve employability. Our training centers are equipped with modern 
-              facilities and experienced trainers.
+              We work at the block level to provide special training programs designed to enhance skills and improve
+              employability. Our training centers are equipped with modern facilities and experienced trainers.
             </p>
             <div className="training-features">
               <div className="feature-item">
@@ -150,7 +150,9 @@ function Education() {
             </div>
           </div>
           <div className="training-image">
-            <div className="image-frame"></div>
+            <div className="image-frame training-image-frame">
+              <img src={Image6 || "/placeholder.svg"} alt="Training Program" className="training-img" />
+            </div>
           </div>
         </div>
 
@@ -160,8 +162,8 @@ function Education() {
             <div className="title-underline"></div>
           </div>
           <p className="exam-intro">
-            We conduct comprehensive coaching programs for various competitive examinations, 
-            both online and offline, to help aspirants achieve their career goals.
+            We conduct comprehensive coaching programs for various competitive examinations, both online and offline, to
+            help aspirants achieve their career goals.
           </p>
           <div className="exam-categories">
             <div className="category-column">
@@ -232,7 +234,7 @@ function Education() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Education;
+export default Education

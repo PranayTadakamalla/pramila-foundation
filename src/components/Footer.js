@@ -26,7 +26,7 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li><Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link></li>
-            <li><Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link></li>
+            <li><Link to="/Committee" onClick={() => window.scrollTo(0, 0)}>Committee Us</Link></li>
             <li><Link to="/education" onClick={() => window.scrollTo(0, 0)}>Education</Link></li>
             <li><Link to="/social" onClick={() => window.scrollTo(0, 0)}>Social Welfare</Link></li>
           </ul>
